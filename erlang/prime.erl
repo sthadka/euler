@@ -1,6 +1,8 @@
 -module(prime).
 -export([sieve/1, is_prime/1, next_prime/1, factor/1]).
 
+
+%% TODO: Create another function sieve withtout list manipulations
 sieve(N) when N > 1 ->
     List = lists:seq(2, N),
     lists:reverse(sieve(2, N, List, [2])).
